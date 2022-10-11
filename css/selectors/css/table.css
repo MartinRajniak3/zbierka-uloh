@@ -7,6 +7,8 @@ table, th, td {
     background-color: #14a61a;
     font-weight: bold;
     text-align: center;
+    position: sticky;
+    top: -1px;
 
 }
 th::first-letter {
@@ -52,5 +54,19 @@ td:nth-child(7) {
  }
 th:nth-child(7) {
     display: none;
+}
+.data td a[href^="https:"] {
+    color: green;
+}
+
+.data td a[href^="http:"] {
+    color: red;
+}
+
+.data td a:not([href^="http"]) {
+    color: blue;
+}
+.data td a[href$=".pdf"]::after {
+    content: "(PDF)";
 }
 
