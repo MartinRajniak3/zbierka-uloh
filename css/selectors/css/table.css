@@ -6,6 +6,7 @@ table, th, td {
 .zahlavie {
     background-color: #14a61a;
     font-weight: bold;
+    text-align: center;
 
 }
 th::first-letter {
@@ -18,3 +19,38 @@ tr:nth-child(even) {
 td:nth-child(2) {
    text-transform: uppercase;
 }
+.data tr:hover td{
+    background-color: darkslategray;
+}
+.data tr:hover td:first-child:not(:hover){
+    color: red;
+}
+td:nth-child(4) {
+    text-align: center;
+}
+td:nth-child(5) {
+    text-align: center;
+}td:nth-child(6) {
+     text-align: center;
+ }
+/*.data tr td:nth-child(n+4):nth-child(-n+6){
+    text-align: center;
+}*/
+
+.data tr:hover td:nth-child(n+4):nth-child(-n+6){
+    background-color: blue;
+}
+.data tr td:hover:nth-child(n+4):nth-child(-n+6){
+    background-color: green;
+}
+.data tr td:hover:nth-child(n+4) ~ td:nth-child(-n+6) {
+    background-color: yellow;
+}
+
+td:nth-child(7) {
+    display: none;
+ }
+th:nth-child(7) {
+    display: none;
+}
+
